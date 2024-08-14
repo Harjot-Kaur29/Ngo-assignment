@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   
+    
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+    gap:30px;
+}
+
+#box{
+    width:50px;
+    height:50px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+}
+
+#increase, #decrease, #redo, #undo{
+    width:90px;
+    height:30px;
+    margin-top:20px;
+    margin-bottom:30px;
+    border-radius: 20px;
+    background-color: blue;
+    color: azure;
+    border:1px solid turquoise;
+    box-shadow: 2px 2px rgb(64, 160, 224);
+}
+
+#myBar {
+    width: 0%;
+    height: 30px;
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+#myProgress {
+    width: 60%;
+    background-color: #ddd;
+    border-radius: 1px solid black;
+}
+
+@keyframes stripe {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+#myBar {
+    width: 0%;
+    height: 30px;
+    background: repeating-linear-gradient(45deg, 
+        rgba(5, 103, 160, 0.5), 
+        rgba(44, 211, 236, 0.5) 10px, 
+        rgba(11, 11, 220, 0.5) 10px, 
+        rgb(41, 208, 220) 20px
+    );
+    background-size: 40px 40px;
+    animation: stripe 1.5s linear infinite;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow for depth */
+    border-radius: 5px; /* Optional: Rounded corners for a softer look */
+  /* Optional: Adds a border to enhance appearance */
+}
+
+.main-container{
+width: 400px;
+height: 400px;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: rgb(176, 176, 248);
+
+box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.5);
+}
